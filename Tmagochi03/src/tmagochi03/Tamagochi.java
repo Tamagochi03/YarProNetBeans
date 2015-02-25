@@ -20,10 +20,10 @@ import javax.vecmath.*;
 public class Tamagochi extends Frame {
 
   private Canvas3D canvas3D;
-  private Appearance ap;
-  private Texture feliz, enfermo;
-  private static Texture texture;
-  private TextureLoader loader;
+  //private Appearance ap;
+  //private Texture feliz, enfermo;
+  //private static Texture texture;
+  //private TextureLoader loader;
   
   
   /**Declaración de Paneles*/
@@ -33,7 +33,7 @@ public class Tamagochi extends Frame {
   private JPanel jpPb;
   private JPanel jpL1;
   private JPanel jpE;
-
+  
   
   /**Declaración de Botones y etiquetas*/
   
@@ -66,15 +66,15 @@ public class Tamagochi extends Frame {
       setResizable(false); 
       setSize(900, 600);
       setLocationRelativeTo(null);
-      GraphicsConfiguration config =     
-      SimpleUniverse.getPreferredConfiguration();
+      //GraphicsConfiguration config =     
+      //SimpleUniverse.getPreferredConfiguration();
       
 
 
       /**Inicialización de Variables*/
       
-      canvas3D = new Canvas3D(config);
-      canvas3D.setSize(500, 00);
+      //canvas3D = new Canvas3D(config);
+      //canvas3D.setSize(500, 00);
       
       bcomer=new JButton("Comer");
       lhambre=new JLabel("Hambre");
@@ -113,26 +113,34 @@ public class Tamagochi extends Frame {
       jpL1.add(mensaje);
 
       
-
-
+      GraphicsConfiguration config =       
+      SimpleUniverse.getPreferredConfiguration();
+      canvas3D = new Canvas3D(config);
+      canvas3D.setSize(500, 00);
+        
+      Universo uni;
+      uni = new Universo(canvas3D);
+      uni.setup3DGraphics();
+      
+      
       add("North", jpL);
       add("East", jpB);
       add("Center", jpL1);
-      add("West",canvas3D);
+      add("West", canvas3D);
       add("South", jpE);
      
-      setup3DGraphics();
+      //setup3DGraphics();
       setVisible(true);
 
   }
 
-  void setup3DGraphics() {
+  /*void setup3DGraphics() {
 
       DirectionalLight light1;
       SimpleUniverse universe = new SimpleUniverse(canvas3D);
       BranchGroup group = new BranchGroup();
       int primflags = Primitive.GENERATE_NORMALS +
-      Primitive.GENERATE_TEXTURE_COORDS/*+Primitive.ENABLE_APPEARANCE_MODIFY */; 
+      Primitive.GENERATE_TEXTURE_COORDS/*+Primitive.ENABLE_APPEARANCE_MODIFY ; 
 
           //ap.setTextureUnitState(textureUnitState);  
       //sphere = new Sphere(0.5f, primflags, ap);
@@ -153,7 +161,7 @@ public class Tamagochi extends Frame {
       
       
       
-  }
+  }*/
 
 
   public static void main(String[] args) { 
