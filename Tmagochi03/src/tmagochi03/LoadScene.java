@@ -88,4 +88,8 @@ public class LoadScene {
         return root;
     }*/
 
+    Map<String, Shape3D> getNamedObjects() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

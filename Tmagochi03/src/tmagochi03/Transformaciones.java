@@ -3,6 +3,7 @@
  */
 package tmagochi03;
 
+import java.util.Map;
 import javax.media.j3d.BranchGroup;
 import javax.media.j3d.Shape3D;
 import javax.media.j3d.Transform3D;
@@ -23,13 +24,15 @@ public class Transformaciones /*implements Runnable*/{
     double factor = 0;
     Vector3f translada;
     Vector3d escala;
+    LoadScene scene;
+    Map<String, Shape3D> nameMap = scene.getNamedObjects();
     //Thread thread = new Thread(this);
-    
+    Shape3D wing = nameMap.get("wing");
     
     public Transformaciones(Shape3D shape){
     
       //  thread.start();
-        
+        tg.addChild(wing);
         tg.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
 	tg.setTransform(transform);
 	tg.addChild(shape);
