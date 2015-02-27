@@ -36,13 +36,13 @@ public class Comiendo {
     
         trans.trasladarRayman();
         
-        tex = new TextureLoader("estrella.JPG", null);
+        tex = new TextureLoader("habitacion.jpg", null);
         imagen= tex.getImage();
         background = new Background();
         background.setImage(imagen);
         background.setApplicationBounds(bounds);
         Tuxcontent.addChild(background);
         return Tuxcontent;
-        
+            
     }
 }
