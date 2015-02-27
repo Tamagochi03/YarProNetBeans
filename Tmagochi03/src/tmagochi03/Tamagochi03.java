@@ -24,6 +24,7 @@ import javax.vecmath.*;
 public class Tamagochi03 extends Frame {
 
   private Canvas3D canvas3D;
+  Transformaciones trans;
   //private Appearance ap;
   //private Texture feliz, enfermo;
   //private static Texture texture;
@@ -138,36 +139,7 @@ public class Tamagochi03 extends Frame {
 
   }
 
-  /*void setup3DGraphics() {
-
-      DirectionalLight light1;
-      SimpleUniverse universe = new SimpleUniverse(canvas3D);
-      BranchGroup group = new BranchGroup();
-      int primflags = Primitive.GENERATE_NORMALS +
-      Primitive.GENERATE_TEXTURE_COORDS/*+Primitive.ENABLE_APPEARANCE_MODIFY ; 
-
-          //ap.setTextureUnitState(textureUnitState);  
-      //sphere = new Sphere(0.5f, primflags, ap);
-      //sphere.setCapability(Primitive.ENABLE_APPEARANCE_MODIFY); 
-      //ap = sphere.getAppearance();
-      //ap.setCapability(Appearance.ALLOW_TEXTURE_ATTRIBUTES_WRITE);
-          //ap.setCapability(Appearance.ALLOW_TEXTURE_WRITE);
-          //ap.setCapability(Appearance.ALLOW_MATERIAL_WRITE);
-          //group.addChild(sphere);
-      LoadScene ls = new LoadScene("C:\\Users\\YareliS\\Documents\\NetBeansProjects\\Tamagochi\\src\\tamagochi\\Rayman 3\\Rayman3.obj");
-      ls.load();
-      ls.listSceneNamedObjects();
-      group.addChild(ls.getParte());
-      universe.getViewingPlatform().setNominalViewingTransform();
-      universe.addBranchGraph(group);
-      
-      //Mundo3D mundo = new Mundo3D(ls.getParte());
-      
-      
-      
-  }*/
-
-
+  
   public static void main(String[] args) { 
 
       new Tamagochi03();
