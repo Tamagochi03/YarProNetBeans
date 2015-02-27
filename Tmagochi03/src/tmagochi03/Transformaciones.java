@@ -40,10 +40,28 @@ public class Transformaciones /*implements Runnable*/{
 	
     }
      
-    public void rotarRayman() {
+    public void rotarRaymanX() {
+  
+        factor = factor + 0.01;
+	transform.rotX(factor);
+	tg.setTransform(transform);
+	//System.out.println("Ha ocurrido una excepcion");
+
+    }
+    
+    public void rotarRaymanY() {
   
         factor = factor + 0.01;
 	transform.rotY(factor);
+	tg.setTransform(transform);
+	//System.out.println("Ha ocurrido una excepcion");
+
+    }
+    
+    public void rotarRaymanZ() {
+  
+        factor = factor + 0.01;
+	transform.rotZ(factor);
 	tg.setTransform(transform);
 	//System.out.println("Ha ocurrido una excepcion");
 

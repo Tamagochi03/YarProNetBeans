@@ -1,6 +1,6 @@
 /*
- * Aquí se implementan los métodos necesarios de la clase
-   Transformaciones para un tamagochi que está comiendo
+ *Aquí se implementan los métodos necesarios de la clase
+   Transformaciones para un tamagochi que está jugando.
  */
 package tmagochi03;
 
@@ -9,14 +9,13 @@ import javax.media.j3d.Background;
 import javax.media.j3d.BoundingSphere;
 import javax.media.j3d.ImageComponent2D;
 import javax.media.j3d.Shape3D;
-import javax.media.j3d.Transform3D;
 import javax.media.j3d.TransformGroup;
 
 /**
  *
  * @author Yareli Avilés
  */
-public class Comiendo {
+public class Jugando {
     
     Transformaciones trans;
     Shape3D shape;
@@ -26,17 +25,18 @@ public class Comiendo {
     BoundingSphere bounds = new BoundingSphere();
     TransformGroup Tuxcontent = new TransformGroup();
     
-    public Comiendo() {
+    public Jugando() {
+    
         shape = new Shape3D();
         trans = new Transformaciones(shape);
-        
     }
     
-    public TransformGroup estadoComiendo() {
+    public TransformGroup estadoDurmiendo() {
     
         trans.trasladarRayman();
+        trans.rotarRaymanX();
         
-        tex = new TextureLoader("cocina.jpg", null);
+        tex = new TextureLoader("jugar.png", null);
         imagen= tex.getImage();
         background = new Background();
         background.setImage(imagen);
