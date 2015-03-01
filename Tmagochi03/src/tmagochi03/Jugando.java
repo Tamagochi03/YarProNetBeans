@@ -18,24 +18,32 @@ import javax.media.j3d.TransformGroup;
 public class Jugando {
     
     Transformaciones trans;
-    Shape3D shape;
+    //Shape3D shape;
     TextureLoader tex;
     ImageComponent2D imagen;
     Background background;
     BoundingSphere bounds = new BoundingSphere();
     TransformGroup Tuxcontent = new TransformGroup();
+    TransformGroup Tuxtrans = new TransformGroup();
+    TransformGroup grupoTrans = new TransformGroup();
     
-    public Jugando() {
+    public Jugando(Shape3D shape) {
     
-        shape = new Shape3D();
-        trans = new Transformaciones(shape);
+        Tuxcontent.addChild(Tuxtrans);
+        estadoDurmiendo(shape);
     }
     
-    public TransformGroup estadoDurmiendo() {
+    public TransformGroup estadoDurmiendo(Shape3D shape) {
     
         trans.trasladarRayman();
         trans.rotarRaymanX();
-        
+        grupoTrans.addChild(shape);
+        return grupoTrans;  
+    }
+    
+    
+    public TransformGroup fondoDurmiendo() {
+    
         tex = new TextureLoader("jugar.png", null);
         imagen= tex.getImage();
         background = new Background();
@@ -43,6 +51,5 @@ public class Jugando {
         background.setApplicationBounds(bounds);
         Tuxcontent.addChild(background);
         return Tuxcontent;
-            
     }
 }

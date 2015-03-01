@@ -25,7 +25,10 @@ public class Tamagochi03 extends Frame {
 
   private Canvas3D canvas3D;
  Universo uni;
-  
+  //private Appearance ap;
+  //private Texture feliz, enfermo;
+  //private static Texture texture;
+  //private TextureLoader loader;
   
   
   /**Declaración de Paneles*/

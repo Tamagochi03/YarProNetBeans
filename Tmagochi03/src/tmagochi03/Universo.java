@@ -23,12 +23,14 @@ public class Universo {
     private SimpleUniverse universe;
     private LoadScene ls;
     TransformGroup tg = new TransformGroup();
+    //MaquinaEstado3D maquina;
     
     
     public Universo(Canvas3D canvas3D){
         
         universe = new SimpleUniverse(canvas3D);
         group = new BranchGroup();
+        //maquina = new MaquinaEstado3D();
         setup3DGraphics();
         
         

@@ -24,25 +24,28 @@ public class Cansado {
     Background background;
     BoundingSphere bounds = new BoundingSphere();
     TransformGroup Tuxcontent = new TransformGroup();
+     TransformGroup Tuxtrans = new TransformGroup();
+    TransformGroup grupoTrans = new TransformGroup();
     
     public Cansado() {
     
-        shape = new Shape3D();
-        trans = new Transformaciones(shape);
+        Tuxcontent.addChild(Tuxtrans);
+        
     }
     
     public TransformGroup estadoDurmiendo() {
     
-        //trans.trasladarRayman();
-        //trans.rotarRaymanX();
-        
-        tex = new TextureLoader("nada.jpg", null);
+        return null;    
+    }
+    
+    public TransformGroup fondoDurmiendo() {
+    
+     tex = new TextureLoader("nada.jpg", null);
         imagen= tex.getImage();
         background = new Background();
         background.setImage(imagen);
         background.setApplicationBounds(bounds);
         Tuxcontent.addChild(background);
         return Tuxcontent;
-            
     }
 }

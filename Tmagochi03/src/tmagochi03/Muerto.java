@@ -8,6 +8,7 @@ import com.sun.j3d.utils.image.TextureLoader;
 import javax.media.j3d.Background;
 import javax.media.j3d.BoundingSphere;
 import javax.media.j3d.ImageComponent2D;
+import javax.media.j3d.Shape3D;
 import javax.media.j3d.TransformGroup;
 
 /**
@@ -20,14 +21,23 @@ public class Muerto {
     ImageComponent2D imagen;
     Background background;
     BoundingSphere bounds = new BoundingSphere();
+    TransformGroup grupoTrans = new TransformGroup();
     TransformGroup Tuxcontent = new TransformGroup();
+    TransformGroup Tuxtrans = new TransformGroup();
     
     public Muerto() {
     
-        estadoMuerto();
+        Tuxcontent.addChild(Tuxtrans);
+        
     }
     
     public TransformGroup estadoMuerto() {
+    
+        return null;
+           
+    }
+    
+    public TransformGroup FondoMuerto() {
     
         tex = new TextureLoader("rip.jpg", null);
         imagen= tex.getImage();
@@ -36,7 +46,6 @@ public class Muerto {
         background.setApplicationBounds(bounds);
         Tuxcontent.addChild(background);
         return Tuxcontent;
-            
     }
 }
 

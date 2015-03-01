@@ -19,23 +19,31 @@ import javax.media.j3d.TransformGroup;
 public class Comiendo {
     
     Transformaciones trans;
-    Shape3D shape;
+    
     TextureLoader tex;
     ImageComponent2D imagen;
     Background background;
     BoundingSphere bounds = new BoundingSphere();
     TransformGroup Tuxcontent = new TransformGroup();
+    TransformGroup Tuxtrans = new TransformGroup();
+    TransformGroup grupoTrans = new TransformGroup();
     
-    public Comiendo() {
-        shape = new Shape3D();
-        trans = new Transformaciones(shape);
-        
+    
+    public Comiendo(Shape3D shape) {
+       
+        Tuxcontent.addChild(Tuxtrans);
+        estadoComiendo(shape);
     }
     
-    public TransformGroup estadoComiendo() {
+    public TransformGroup estadoComiendo(Shape3D shape) {
     
         trans.trasladarRayman();
-        
+        grupoTrans.addChild(shape);  
+        return grupoTrans;
+    }
+    
+    public TransformGroup fondoComiendo() {
+    
         tex = new TextureLoader("cocina.jpg", null);
         imagen= tex.getImage();
         background = new Background();
@@ -43,6 +51,5 @@ public class Comiendo {
         background.setApplicationBounds(bounds);
         Tuxcontent.addChild(background);
         return Tuxcontent;
-            
     }
 }

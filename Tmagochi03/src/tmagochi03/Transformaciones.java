@@ -32,24 +32,22 @@ public class Transformaciones /*implements Runnable*/{
     public Transformaciones(Shape3D shape){
     
       //  thread.start();
-        tg.addChild(wing);
+        /*tg.addChild(wing);
         tg.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
 	tg.setTransform(transform);
 	tg.addChild(shape);
-	group.addChild(tg);
+	group.addChild(tg);*/
 	
     }
 
-    //Transformaciones() {
-      //   throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    //}
+   
      
     public void rotarRaymanX() {
   
         factor = factor + 0.01;
 	transform.rotX(factor);
 	tg.setTransform(transform);
-	//System.out.println("Ha ocurrido una excepcion");
+	
 
     }
     
@@ -58,7 +56,7 @@ public class Transformaciones /*implements Runnable*/{
         factor = factor + 0.01;
 	transform.rotY(factor);
 	tg.setTransform(transform);
-	//System.out.println("Ha ocurrido una excepcion");
+	
 
     }
     
@@ -67,7 +65,7 @@ public class Transformaciones /*implements Runnable*/{
         factor = factor + 0.01;
 	transform.rotZ(factor);
 	tg.setTransform(transform);
-	//System.out.println("Ha ocurrido una excepcion");
+	
 
     }
     

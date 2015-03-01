@@ -24,18 +24,26 @@ public class Durmiendo {
     Background background;
     BoundingSphere bounds = new BoundingSphere();
     TransformGroup Tuxcontent = new TransformGroup();
+    TransformGroup Tuxtrans = new TransformGroup();
+    TransformGroup grupoTrans = new TransformGroup();
     
     public Durmiendo() {
     
-        shape = new Shape3D();
-        trans = new Transformaciones(shape);
+        Tuxcontent.addChild(Tuxtrans);
+        estadoDurmiendo(shape);
     }
     
-    public TransformGroup estadoDurmiendo() {
+    public TransformGroup estadoDurmiendo(Shape3D shape) {
     
         trans.trasladarRayman();
         trans.rotarRaymanZ();
-        
+        grupoTrans.addChild(shape);
+        return grupoTrans;
+            
+    }
+    
+    public TransformGroup fondoDurmiendo() {
+    
         tex = new TextureLoader("habitacion.jpg", null);
         imagen= tex.getImage();
         background = new Background();
@@ -43,7 +51,6 @@ public class Durmiendo {
         background.setApplicationBounds(bounds);
         Tuxcontent.addChild(background);
         return Tuxcontent;
-            
     }
     
     
