@@ -24,14 +24,11 @@ public class Muerto {
     
     public Muerto() {
     
-        estadoDurmiendo();
+        estadoMuerto();
     }
     
-    public TransformGroup estadoDurmiendo() {
+    public TransformGroup estadoMuerto() {
     
-        //trans.trasladarRayman();
-        //trans.rotarRaymanX();
-        
         tex = new TextureLoader("rip.jpg", null);
         imagen= tex.getImage();
         background = new Background();

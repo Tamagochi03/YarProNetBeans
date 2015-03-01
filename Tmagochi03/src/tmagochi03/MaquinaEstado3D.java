@@ -5,6 +5,7 @@
  */
 package tmagochi03;
 
+import javafx.scene.transform.Transform;
 import javax.media.j3d.Shape3D;
 import javax.media.j3d.TransformGroup;
 
@@ -23,4 +24,10 @@ public class MaquinaEstado3D {
         trans = new Transformaciones(shape);
         transGrupo = new TransformGroup();
     }
+    
+    /*public TransformGroup tamagochiMuerto() {
+    
+        Muerto muerto = new Muerto();
+        
+    }*/
 }

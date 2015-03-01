@@ -24,11 +24,8 @@ import javax.vecmath.*;
 public class Tamagochi03 extends Frame {
 
   private Canvas3D canvas3D;
-  Transformaciones trans;
-  //private Appearance ap;
-  //private Texture feliz, enfermo;
-  //private static Texture texture;
-  //private TextureLoader loader;
+ Universo uni;
+  
   
   
   /**Declaración de Paneles*/
@@ -71,16 +68,10 @@ public class Tamagochi03 extends Frame {
       setResizable(false); 
       setSize(900, 600);
       setLocationRelativeTo(null);
-      //GraphicsConfiguration config =     
-      //SimpleUniverse.getPreferredConfiguration();
+    
       
-
-
       /**Inicialización de Variables*/
-      
-      //canvas3D = new Canvas3D(config);
-      //canvas3D.setSize(500, 00);
-      
+
       bcomer=new JButton("Comer");
       lhambre=new JLabel("Hambre");
 
@@ -123,9 +114,10 @@ public class Tamagochi03 extends Frame {
       canvas3D = new Canvas3D(config);
       canvas3D.setSize(500, 00);
         
-      Universo uni;
+      
       uni = new Universo(canvas3D);
       uni.setup3DGraphics();
+      
       
       
       add("North", jpL);
@@ -133,8 +125,7 @@ public class Tamagochi03 extends Frame {
       add("Center", jpL1);
       add("West", canvas3D);
       add("South", jpE);
-     
-      //setup3DGraphics();
+ 
       setVisible(true);
 
   }

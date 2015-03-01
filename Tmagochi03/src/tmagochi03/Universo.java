@@ -36,35 +36,15 @@ public class Universo {
     
     void setup3DGraphics() {
 
-      //DirectionalLight light1;
-      
-      //int primflags = Primitive.GENERATE_NORMALS +
-      //Primitive.GENERATE_TEXTURE_COORDS/*+Primitive.ENABLE_APPEARANCE_MODIFY */; 
-
-          //ap.setTextureUnitState(textureUnitState);  
-      //sphere = new Sphere(0.5f, primflags, ap);
-      //sphere.setCapability(Primitive.ENABLE_APPEARANCE_MODIFY); 
-      //ap = sphere.getAppearance();
-      //ap.setCapability(Appearance.ALLOW_TEXTURE_ATTRIBUTES_WRITE);
-          //ap.setCapability(Appearance.ALLOW_TEXTURE_WRITE);
-          //ap.setCapability(Appearance.ALLOW_MATERIAL_WRITE);
-          //group.addChild(sphere);
       group = new BranchGroup();
       ls = new LoadScene("C:\\Users\\YareliS\\Documents\\NetBeansProjects\\YarProNetBeans\\Tmagochi03\\src\\tmagochi03\\Rayman3.obj");
       ls.load();
       ls.listSceneNamedObjects();
       group.addChild(ls.getParte());
-      //group.addChild(ls.getRoot());
-     // group.addChild(ls.getRoot()/*new ColorCube(1)*/);
       universe.getViewingPlatform().setNominalViewingTransform();
       universe.addBranchGraph(group);
       
-      //Mundo3D mundo = new Mundo3D(ls.getParte());
-      
   }
     
-    public static void main(String[] args) {
-    
-    
-    }
+   
 }
